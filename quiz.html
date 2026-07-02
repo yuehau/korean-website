@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz · Korean for Beginners</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<header class="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo">
+      <span class="logo-icon">🍱</span>
+      <span class="logo-text">Korean <em>한국어</em></span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-menu" id="navMenu">
+      <a href="index.html">Home</a>
+      <a href="vocabulary.html">Vocabulary</a>
+      <a href="grammar.html">Grammar</a>
+      <a href="exercises.html">Exercises</a>
+      <a href="quiz.html" class="active">Quiz</a>
+      <a href="dialogue.html">Dialogue</a>
+      <a href="about.html">About</a>
+    </nav>
+  </div>
+</header>
+
+<section class="page-header">
+  <h1>📝 <span class="korean-title">시험</span> Quiz</h1>
+  <p>Preview the 10 questions, then submit your answers — right here on our site</p>
+</section>
+
+<section class="section">
+  <div class="container">
+
+    <!-- ===== How it works ===== -->
+    <div class="quiz-page-intro reveal">
+      <div class="quiz-step">
+        <span class="quiz-step-num">1</span>
+        <div>
+          <h4>Preview the questions</h4>
+          <p>Read through all 10 questions below to see what's coming.</p>
+        </div>
+      </div>
+      <div class="quiz-step">
+        <span class="quiz-step-num">2</span>
+        <div>
+          <h4>Practice first (optional)</h4>
+          <p>Warm up with instant feedback on the <a href="exercises.html">Exercises page</a>.</p>
+        </div>
+      </div>
+      <div class="quiz-step">
+        <span class="quiz-step-num">3</span>
+        <div>
+          <h4>Submit your answers</h4>
+          <p>Fill in the form at the bottom — your response comes straight to us.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== Question preview ===== -->
+    <div class="reveal" style="margin-top: 60px;">
+      <p class="section-eyebrow">Question preview</p>
+      <h2 class="section-title">What you'll be asked</h2>
+
+      <div class="qp-grid">
+        <div class="qp-card">
+          <span class="qp-num">Q1</span>
+          <p class="qp-question">What does <strong>비빔밥</strong> mean?</p>
+          <div class="qp-options"><span>Kimchi</span><span>Mixed rice</span><span>Pizza</span><span>Sandwich</span></div>
+        </div>
+        <div class="qp-card">
+          <span class="qp-num">Q2</span>
+          <p class="qp-question">Which is the Korean word for <strong>"ramen"</strong>?</p>
+          <div class="qp-options"><span>김밥</span><span>떡볶이</span><span>라면</span><span>불고기</span></div>
+        </div>
+        <div class="qp-card">
+          <span class="qp-num">Q3</span>
+          <p class="qp-question">What does <strong>"저는 김밥을 먹어요"</strong> mean?</p>
+          <div class="qp-options"><span>I like gimbap</span><span>I eat gimbap</span><span>Gimbap is delicious</span><span>Please give me gimbap</span></div>
+        </div>
+        <div class="qp-card">
+          <span class="qp-num">Q4</span>
+          <p class="qp-question">Which is the Korean native number for <strong>"three"</strong>?</p>
+          <div class="qp-options"><span>셋</span><span>하나</span><span>넷</span><span>둘</span></div>
+        </div>
+        <div class="qp-card">
+          <span class="qp-num">Q5</span>
+          <p class="qp-question">Which Korean word means the number <strong>"8"</strong>?</p>
+          <div class="qp-options"><span>일곱</span><span>여덟</span><span>아홉</span><span>여섯</span></div>
+        </div>
+        <div class="qp-card">
+          <span class="qp-num">Q6</span>
+          <p class="qp-question">Which counting word is used for <strong>bowls or dishes</strong>?</p>
+          <div class="qp-options"><span>명</span><span>병</span><span>잔</span><span>그릇</span></div>
+        </div>
+        <div class="qp-card">
+          <span class="qp-num">Q7</span>
+          <p class="qp-question">How does <strong>둘</strong> change when used with a counting unit?</p>
+          <div class="qp-options"><span>한</span><span>세</span><span>네</span><span>두</span></div>
+        </div>
+        <div class="qp-card">
+          <span class="qp-num">Q8</span>
+          <p class="qp-question">Which sentence means <strong>"Please give me 2 bowls of bibimbap"</strong>?</p>
+          <div class="qp-options"><span>비빔밥 주세요</span><span>비빔밥 둘 주세요</span><span>비빔밥 두 그릇 주세요</span><span>비빔밥 두 명 주세요</span></div>
+        </div>
+        <div class="qp-card">
+          <span class="qp-num">Q9</span>
+          <p class="qp-question">Which counting word is used for <strong>people</strong>?</p>
+          <div class="qp-options"><span>병</span><span>명</span><span>개</span><span>잔</span></div>
+        </div>
+        <div class="qp-card">
+          <span class="qp-num">Q10</span>
+          <p class="qp-question">What does <strong>"김치는 맛있어요"</strong> mean?</p>
+          <div class="qp-options"><span>I eat kimchi</span><span>Kimchi is spicy</span><span>Kimchi is delicious</span><span>I like kimchi</span></div>
+        </div>
+      </div>
+
+      <p style="text-align:center; color: var(--text-soft); margin-top: 28px;">
+        Not sure about some answers? Review the
+        <a href="vocabulary.html" style="color:var(--coral); font-weight:700;">Vocabulary</a> and
+        <a href="grammar.html" style="color:var(--coral); font-weight:700;">Grammar</a> pages,
+        or <a href="exercises.html" style="color:var(--coral); font-weight:700;">practice with instant feedback</a> first.
+      </p>
+    </div>
+
+    <!-- ===== Embedded Google Form ===== -->
+    <div class="reveal" style="margin-top: 80px;" id="submit">
+      <p class="section-eyebrow">Ready? 화이팅!</p>
+      <h2 class="section-title">Take the quiz &amp; submit</h2>
+      <p style="color: var(--text-soft); margin: -20px 0 28px; max-width: 640px;">
+        Answer directly in the form below — when you press <strong>Submit</strong>, your response is sent
+        to our team instantly. No account needed.
+      </p>
+
+      <div class="quiz-embed-frame">
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLScF0jUdcJ2TDVxeoCjuLqr890zxIHR9Q3OMIYzV_umFIvpwZg/viewform?embedded=true"
+          title="Korean for Beginners Quiz"
+          loading="lazy">
+          Loading…
+        </iframe>
+      </div>
+
+      <p style="text-align:center; margin-top: 20px; color: var(--text-soft); font-size: 0.92rem;">
+        Form not loading?
+        <a href="https://forms.gle/8SnY8mgvUHB27Ziw7" target="_blank" rel="noopener"
+           style="color:var(--coral); font-weight:700;">Open the quiz in a new tab ↗</a>
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <p class="footer-title">Korean for Beginners <span>·</span> Group 4 FOM 1</p>
+    <p class="footer-sub">LMPU3282 · Lesson 6 · 얼마예요? How much is it?</p>
+    <p class="footer-credit">Made with 💛 for Korean language learners</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
