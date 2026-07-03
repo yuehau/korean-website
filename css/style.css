@@ -1428,6 +1428,19 @@ a {
 
 .dialogue-speaker.speaker-b { background: var(--teal-light); color: var(--teal-dark); }
 .dialogue-speaker.speaker-c { background: var(--yellow-light); color: var(--yellow-dark); }
+.dialogue-speaker.speaker-d { background: var(--purple-light); color: var(--purple); }
+.dialogue-speaker.speaker-all { background: var(--bg-alt); color: var(--text-soft); font-style: italic; }
+
+/* Stage direction / scene note line */
+.dialogue-note {
+  text-align: center;
+  color: var(--text-mute);
+  font-style: italic;
+  font-size: 0.88rem;
+  padding: 10px 0;
+  border-bottom: 1px dashed var(--border);
+}
+.dialogue-note:last-child { border-bottom: none; }
 
 .dialogue-text {
   flex: 1;
@@ -1449,6 +1462,50 @@ a {
 .role-play-video {
   max-width: 800px;
   margin: 0 auto 60px;
+}
+
+/* Scene navigator (jump links to Scene 1 / Scene 2) */
+.scene-nav {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+.scene-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: white;
+  padding: 14px 24px;
+  border-radius: 999px;
+  box-shadow: var(--shadow-sm);
+  font-weight: 700;
+  color: var(--text);
+  transition: all 0.3s var(--ease);
+  border: 2px solid transparent;
+}
+
+.scene-nav-item:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--coral);
+  color: var(--coral);
+}
+
+.scene-nav-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--coral), var(--purple));
+  color: white;
+  font-weight: 800;
+  font-size: 0.9rem;
+  flex-shrink: 0;
 }
 
 .video-frame {
