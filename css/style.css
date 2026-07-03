@@ -776,9 +776,23 @@ a {
 }
 
 .member-vocab-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 28px;
+}
+
+.member-vocab-grid .member-card {
+  flex: 0 1 calc(50% - 14px);
+  min-width: 320px;
+  max-width: 460px;
+}
+
+@media (max-width: 720px) {
+  .member-vocab-grid .member-card {
+    flex: 1 1 100%;
+    max-width: 460px;
+  }
 }
 
 .member-card {
@@ -2289,4 +2303,111 @@ a {
   .quiz-embed-frame iframe {
     height: 1600px;
   }
+}
+
+/* ============================================
+   Contribution badges — replaces hand-drawn
+   screenshot annotations with a built-in credit
+   ============================================ */
+
+/* Page-level badge row, sits under the page header */
+.contrib-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  max-width: 900px;
+  margin: -12px auto 0;
+  padding: 0 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.contrib-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: white;
+  border: 1px solid var(--border);
+  padding: 8px 16px 8px 10px;
+  border-radius: 999px;
+  box-shadow: var(--shadow-sm);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-soft);
+  transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease);
+}
+
+.contrib-chip:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.contrib-chip .contrib-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--coral-light);
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+.contrib-chip strong {
+  color: var(--text);
+  font-weight: 800;
+}
+
+.contrib-chip.chip-leader .contrib-icon { background: var(--yellow-light); }
+.contrib-chip.chip-teal .contrib-icon { background: var(--teal-light); }
+.contrib-chip.chip-purple .contrib-icon { background: var(--purple-light); }
+
+/* Inline section credit — e.g. above a block of content */
+.contrib-note {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--coral);
+  background: var(--coral-light);
+  padding: 5px 12px;
+  border-radius: 999px;
+  margin-bottom: 14px;
+}
+
+/* "Recorded by" ribbon overlaid on video thumbnails */
+.recorded-by {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(15, 10, 8, 0.72);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  color: white;
+  padding: 6px 12px 6px 8px;
+  border-radius: 999px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+}
+
+.recorded-by .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--coral);
+  flex-shrink: 0;
+}
+
+.video-placeholder,
+.video-frame {
+  position: relative;
 }
